@@ -1,229 +1,271 @@
------05-16-2016 @ 17:16:02 ------
+-----05-16-2016 @ 17:51:20 ------
 Array
 (
     [0] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = 'siteorigin_panels_is_using_bundled' LIMIT 1
-            [1] => 1
+            [0] => SELECT FOUND_ROWS()
+            [1] => 2
         )
 
     [1] => Array
         (
-            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1) ORDER BY meta_id ASC
-            [1] => 1
+            [0] => SELECT SQL_CALC_FOUND_ROWS wp_posts.ID FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'lp_course' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'closed' OR wp_posts.post_author = 1 AND wp_posts.post_status = 'private' OR wp_posts.post_author = 1 AND wp_posts.post_status = 'hidden') ORDER BY wp_posts.post_date DESC LIMIT 0, 10
+            [1] => 2
         )
 
     [2] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_learn_press_install' LIMIT 1
+            [0] => SELECT wp_posts.* FROM wp_posts WHERE ID IN (34)
             [1] => 1
         )
 
     [3] => Array
         (
-            [0] => SELECT * FROM wp_posts WHERE ID = 31 LIMIT 1
+            [0] => SELECT t.*, tt.*, tr.object_id FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN wp_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('course_category', 'course_tag') AND tr.object_id IN (34) ORDER BY t.name ASC
             [1] => 1
         )
 
     [4] => Array
         (
-            [0] => SELECT SQL_CALC_FOUND_ROWS wp_posts.ID FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'closed' OR wp_posts.post_status = 'private' OR wp_posts.post_status = 'hidden') ORDER BY wp_posts.post_date DESC LIMIT 0, 10
+            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (34) ORDER BY meta_id ASC
             [1] => 1
         )
 
     [5] => Array
         (
-            [0] => SELECT FOUND_ROWS()
+            [0] => SELECT * FROM wp_posts WHERE ID = 31 LIMIT 1
             [1] => 1
         )
 
     [6] => Array
         (
-            [0] => SELECT wp_posts.* FROM wp_posts WHERE ID IN (1)
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_allow_search' LIMIT 1
             [1] => 1
         )
 
     [7] => Array
         (
-            [0] => SELECT t.*, tt.*, tr.object_id FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN wp_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('category', 'post_tag', 'post_format') AND tr.object_id IN (1) ORDER BY t.name ASC
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_use_wp_editor' LIMIT 1
             [1] => 1
         )
 
     [8] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_allow_search' LIMIT 1
+            [0] => SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.term_id = 6
             [1] => 1
         )
 
     [9] => Array
         (
-            [0] => SELECT * FROM wp_posts WHERE ID = 5 LIMIT 1
+            [0] => SELECT tr.object_id FROM wp_term_relationships AS tr INNER JOIN wp_term_taxonomy AS tt ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('nav_menu') AND tt.term_id IN ('6') ORDER BY tr.object_id ASC
             [1] => 1
         )
 
     [10] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_use_wp_editor' LIMIT 1
+            [0] => SELECT wp_posts.* FROM wp_posts WHERE 1=1 AND wp_posts.ID IN (16,17,19,20,63) AND wp_posts.post_type = 'nav_menu_item' AND ((wp_posts.post_status = 'publish')) ORDER BY wp_posts.menu_order ASC 
             [1] => 1
         )
 
     [11] => Array
         (
-            [0] => SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.term_id = 6
+            [0] => SELECT option_value FROM wp_options WHERE option_name = 'siteorigin_panels_is_using_bundled' LIMIT 1
             [1] => 1
         )
 
     [12] => Array
         (
-            [0] => SELECT tr.object_id FROM wp_term_relationships AS tr INNER JOIN wp_term_taxonomy AS tt ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('nav_menu') AND tt.term_id IN ('6') ORDER BY tr.object_id ASC
+            [0] => SELECT wp_posts.* FROM wp_posts WHERE 1=1 AND wp_posts.ID IN (5,60,7,2) AND wp_posts.post_type = 'page' AND ((wp_posts.post_status = 'publish')) ORDER BY wp_posts.post_date DESC 
             [1] => 1
         )
 
     [13] => Array
         (
-            [0] => SELECT wp_posts.* FROM wp_posts WHERE 1=1 AND wp_posts.ID IN (16,17,19,20,63) AND wp_posts.post_type = 'nav_menu_item' AND ((wp_posts.post_status = 'publish')) ORDER BY wp_posts.menu_order ASC 
+            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (60,7,5,2) ORDER BY meta_id ASC
             [1] => 1
         )
 
     [14] => Array
         (
-            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (16,17,63,19,20) ORDER BY meta_id ASC
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_learn_press_message' LIMIT 1
             [1] => 1
         )
 
     [15] => Array
         (
-            [0] => SELECT wp_posts.* FROM wp_posts WHERE 1=1 AND wp_posts.ID IN (5,60,7,2) AND wp_posts.post_type = 'page' AND ((wp_posts.post_status = 'publish')) ORDER BY wp_posts.post_date DESC 
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_learn_press_message' LIMIT 1
             [1] => 1
         )
 
     [16] => Array
         (
-            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (60,7,5,2) ORDER BY meta_id ASC
+            [0] => SELECT autoload FROM wp_options WHERE option_name = '_transient_learn_press_message'
             [1] => 1
         )
 
     [17] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_learn_press_install' LIMIT 1
+            [0] =>  SELECT uc.* FROM wp_learnpress_user_courses uc INNER JOIN wp_posts o ON o.ID = uc.order_id WHERE uc.course_id = 34 AND uc.user_id = 1 AND o.post_status = 'lp-completed' ORDER BY user_course_id DESC 
             [1] => 1
         )
 
     [18] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_subs_slug' LIMIT 1
+            [0] =>  SELECT cc.* FROM wp_posts p INNER JOIN wp_learnpress_sections cc ON p.ID = cc.section_course_id WHERE p.ID = 34 ORDER BY `section_order` ASC 
             [1] => 1
         )
 
     [19] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_theme_package_id' LIMIT 1
+            [0] =>  SELECT si.*, p.* FROM wp_posts p INNER JOIN wp_learnpress_section_items si ON si.item_id = p.ID INNER JOIN wp_learnpress_sections s ON s.section_id = si.section_id WHERE s.section_id IN( 1 ) ORDER BY s.section_order, si.item_order ASC 
             [1] => 1
         )
 
     [20] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_archive_slug' LIMIT 1
+            [0] =>  SELECT order_id, si.item_id FROM wp_posts o INNER JOIN wp_postmeta om ON om.post_id = o.ID AND om.meta_key = '_user_id' AND om.meta_value = 1 INNER JOIN wp_learnpress_order_items oi ON o.ID = oi.order_ID INNER JOIN wp_learnpress_order_itemmeta oim ON oim.learnpress_order_item_id= oi.order_item_id AND oim.meta_key = '_course_id' INNER JOIN wp_posts c ON c.ID = oim.meta_value INNER JOIN wp_learnpress_sections s ON s.section_course_id = c.ID INNER JOIN wp_learnpress_section_items si ON si.section_id = s.section_id WHERE si.item_id IN (36,41) AND o.post_status = 'lp-completed' 
             [1] => 1
         )
 
     [21] => Array
         (
-            [0] => SELECT * FROM wp_users WHERE user_login = 'mariano'
+            [0] => SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (16,17,63,19,20) ORDER BY meta_id ASC
             [1] => 1
         )
 
     [22] => Array
         (
-            [0] => SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (1) ORDER BY umeta_id ASC
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_learn_press_install' LIMIT 1
             [1] => 1
         )
 
     [23] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_root_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_theme_package_id' LIMIT 1
             [1] => 1
         )
 
     [24] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_include_root' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_reply_slug' LIMIT 1
             [1] => 1
         )
 
     [25] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_forum_slug' LIMIT 1
+            [0] => SELECT * FROM wp_users WHERE user_login = 'mariano'
             [1] => 1
         )
 
     [26] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_slug' LIMIT 1
+            [0] => SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (1) ORDER BY umeta_id ASC
             [1] => 1
         )
 
     [27] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_show_on_root' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_root_slug' LIMIT 1
             [1] => 1
         )
 
     [28] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_reply_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_include_root' LIMIT 1
             [1] => 1
         )
 
     [29] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_favs_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_forum_slug' LIMIT 1
             [1] => 1
         )
 
     [30] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_tag_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_slug' LIMIT 1
             [1] => 1
         )
 
     [31] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_allow_topic_tags' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_show_on_root' LIMIT 1
             [1] => 1
         )
 
     [32] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_use_autoembed' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_archive_slug' LIMIT 1
             [1] => 1
         )
 
     [33] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_topic_tag_slug' LIMIT 1
             [1] => 1
         )
 
     [34] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_view_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_learn_press_install' LIMIT 1
             [1] => 1
         )
 
     [35] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_search_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_allow_topic_tags' LIMIT 1
             [1] => 1
         )
 
     [36] => Array
         (
-            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_reply_archive_slug' LIMIT 1
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_use_autoembed' LIMIT 1
             [1] => 1
         )
 
     [37] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [38] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_view_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [39] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_search_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [40] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_reply_archive_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [41] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_favs_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [42] => Array
+        (
+            [0] => SELECT option_value FROM wp_options WHERE option_name = '_bbp_user_subs_slug' LIMIT 1
+            [1] => 1
+        )
+
+    [43] => Array
+        (
+            [0] => SELECT * FROM wp_posts WHERE ID = 5 LIMIT 1
+            [1] => 1
+        )
+
+    [44] => Array
         (
             [0] =>  SELECT comment_approved, COUNT( * ) AS total FROM wp_comments GROUP BY comment_approved 
             [1] => 1
